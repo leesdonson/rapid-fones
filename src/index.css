@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  font-family: "Lobster", cursive;
+  background: linear-gradient(rgba(38, 42, 248, 0.897), rgb(247, 133, 2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-bg {
+  background: linear-gradient(
+    to right,
+    rgba(12, 4, 133, 0.986),
+    rgba(230, 160, 10, 0.918)
+  );
+  opacity: 0.6;
+}
+
+.linear-bg {
+  background: linear-gradient(
+    to right,
+    rgba(71, 51, 23, 0.938),
+    rgba(3, 5, 29, 0.99)
+  );
+}
+
+@layer base {
+  .custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .mobile {
+      position: absolute;
+      top: 99.9%;
+      left: 0;
+      right: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.5s ease-in-out;
+    }
+
+    .mobile.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .custom {
+      flex-direction: column;
+    }
+  }
+}
