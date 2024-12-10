@@ -3,8 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        "auto-fit": "repeat(auto-fit, minmax(200px, 1fr))",
+      },
       animation: {
         blob: "blob 20s infinite",
+        "spin-slow": "spin 25s linear infinite",
       },
       keyframes: {
         blob: {

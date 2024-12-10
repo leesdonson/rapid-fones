@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const navLinks = [
   {
-    id: 1,
+    id: 11,
     title: "Home",
     path: "/",
   },
   {
-    id: 2,
+    id: 12,
     title: "Products",
     path: "/products",
   },
   {
-    id: 3,
+    id: 13,
     title: "About",
     path: "/about-us",
   },
   {
-    id: 4,
+    id: 14,
     title: "Contact",
     path: "/contact",
   },
@@ -32,13 +32,15 @@ const NavBar = () => {
   const toggleMenu = () => setOpen(!open);
 
   return (
-    <header className="bg-blue-950  border-b border-slate-600 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
-      <div className="logo">
-        <h2 className="flex font-bold text-3xl">
-          <Link className="logo" to="/">
-            RapidFones
-          </Link>
-        </h2>
+    <header className="bg-slate-950  border-b border-slate-600 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
+      <div className="logo flex items-center justify-center w-[160px] md:w-[200px] h-[40px]">
+        <Link className="logo " to="/">
+          <img
+            className="w-[100%] object-contain"
+            src="/rf_logo.png"
+            alt="Logo"
+          />
+        </Link>
       </div>
 
       <nav

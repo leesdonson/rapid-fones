@@ -1,17 +1,40 @@
+import { useContext, useEffect } from "react";
+import { products } from "../../lib/products";
+import Card from "./Card";
+import { FilterContext } from "../../contexts/FilterContext";
 const ProductList = () => {
+  const { selectedCategory, setSelectedCategory } = useContext(FilterContext);
+
+  useEffect(() => {
+    setSelectedCategory("all");
+  }, []);
+
+  const filteredProducts = products.filter((product) => {
+    if (selectedCategory === "all") {
+      return true;
+    } else {
+      return product.category === selectedCategory;
+    }
+  });
+
   return (
     <div className="w-full mt-[1px]">
-      <div className="w-full banner-bg relative h-[250px] border border-slate-600 rounded-b-lg">
-        <img
-          src="/img3.png"
-          alt="image"
-          className="w-[100%] object-cover h-[100%] rounded-lg opacity-20"
-        />
-        <p className="text-2xl absolute top-0  left-0 font-semibold text-slate-200 p-2">
-          Products
-        </p>
+      <div className="grid grid-cols-auto-fit gap-3 py-2 px-1">
+        {filteredProducts.map((image) => (
+          <div
+            key={image.id}
+            className="border border-slate-700 p-2 rounded-md"
+          >
+            <Card
+              name={image.name}
+              description={image.description}
+              price={image.price}
+              image={image.image}
+              slug={image.slug}
+            />
+          </div>
+        ))}
       </div>
-      <h1 className="text-2xl font-semibold text-slate-200 p-2">Products</h1>
     </div>
   );
 };

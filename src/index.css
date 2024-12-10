@@ -33,9 +33,21 @@ body {
     rgba(12, 4, 133, 0.986),
     rgba(230, 160, 10, 0.918)
   );
-  opacity: 0.6;
+  opacity: 0.8;
 }
-
+.banner-text {
+  background: linear-gradient(
+    to right,
+    rgba(241, 12, 12, 0.993),
+    rgba(53, 6, 223, 0.993)
+  );
+  font-family: "Lobster", cursive;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.3px white;
+  letter-spacing: 5px;
+}
 .linear-bg {
   background: linear-gradient(
     to right,
@@ -67,6 +79,21 @@ body {
     }
     .custom {
       flex-direction: column;
+    }
+
+    .custom-search {
+      position: absolute;
+      margin-top: 0.3rem;
+      top: 99.9%;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.5s ease-in-out;
+    }
+
+    .custom-search.open {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
   }
 }
