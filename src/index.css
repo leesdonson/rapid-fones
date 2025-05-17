@@ -55,6 +55,9 @@ body {
     rgba(3, 5, 29, 0.99)
   );
 }
+.stroke {
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
 
 @layer base {
   .custom {

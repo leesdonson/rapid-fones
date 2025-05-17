@@ -1,38 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
-
-const navLinks = [
-  {
-    id: 11,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 12,
-    title: "Products",
-    path: "/products",
-  },
-  {
-    id: 13,
-    title: "About",
-    path: "/about-us",
-  },
-  {
-    id: 14,
-    title: "Contact",
-    path: "/contact",
-  },
-];
+import { navLinks } from "./lib/navlinks";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const pathname = useLocation().pathname;
 
   const toggleMenu = () => setOpen(!open);
 
   return (
-    <header className="bg-slate-950  border-b border-slate-600 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
+    <header className="backdrop-blur-2xl bg-slate-900/30 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
       <div className="logo flex items-center justify-center w-[160px] md:w-[200px] h-[40px]">
         <Link className="logo " to="/">
           <img
@@ -58,7 +37,9 @@ const NavBar = () => {
             className={
               open
                 ? "text-white hover:bg-blue-900 w-full text-center p-2 font-medium"
-                : "text-white hover:text-orange-400 font-medium"
+                : pathname === link.path
+                ? `text-white  font-medium bg-blue-800 p-2 rounded-md`
+                : `text-white hover:bg-orange-400 font-medium p-2 rounded-md bg-blue-800/50`
             }
           >
             {link.title}

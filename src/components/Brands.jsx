@@ -9,15 +9,18 @@ const brandImages = [
 ];
 const Brands = () => {
   return (
-    <div className="bg-gray-500">
-      <h1 className=" text-lg md:text-2xl text-black text-center py-3 font-bold">
+    <div className="bg-gray-300 h-[300px] overflow-y-auto p-2">
+      <h1 className=" text-lg md:text-2xl text-slate-900 text-center mb-2 py-3 font-bold">
         Distributer of the most Trusted Brands
       </h1>
-      <div className="w-full overflow-hidden flex items-center justify-between flex-wrap px-3 py-5">
+      <div className="w-full h-full overflow-y-auto grid grid-cols-3 md:grid-cols-5 gap-3">
         {brandImages.map((image) => (
-          <div key={image.id} className="">
+          <div
+            key={image.id}
+            className="border border-slate-600 rounded-md w-[120px] h-[120px]  md:w-[170px] md:h-[170px] p-5 relative"
+          >
             <img
-              className="w-[60px] h-[60px] md:h-[100px] md:w-[100px] animate-spin-slow duration-1000 object-contain transition-all"
+              className="w-full h-full animate-spin-slow duration-1000 object-contain transition-all"
               src={image.image}
               alt="brand"
             />

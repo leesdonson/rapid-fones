@@ -15,7 +15,7 @@ const About = () => {
           </p>
         </div>
         <div className="w-full flex gap-3 flex-col border border-slate-700 p-2 rounded-md mt-2 mb-2">
-          <div className="border border-slate-700 p-2 rounded-md">
+          <div className="border border-slate-700 p-2 rounded-md max-w-2xl w-full mx-auto">
             <div className="flex items-center justify-center gap-1">
               <span className="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 inline-block"></span>
               <h1 className="text-xl md:text-2xl xl:text-3xl xl:leading-tight font-semibold text-slate-200 p-2">
@@ -33,7 +33,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="border border-slate-700 p-2 rounded-md">
+          <div className="border border-slate-700 p-2 rounded-md max-w-2xl w-full mx-auto">
             <div className="flex items-center justify-center gap-1">
               <span className="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 inline-block"></span>
               <h1 className="text-xl md:text-2xl xl:text-3xl xl:leading-tight font-semibold text-slate-200 p-2">
@@ -51,7 +51,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="border border-slate-700 p-2 rounded-md">
+          <div className="border border-slate-700 p-2 rounded-md max-w-2xl w-full mx-auto">
             <div className="flex items-center justify-center gap-1">
               <span className="w-[20px] h-[20px] rounded-full bg-blue-500 mt-1 inline-block"></span>
               <h1 className="text-xl md:text-2xl xl:text-3xl xl:leading-tight font-semibold text-slate-200 p-2">

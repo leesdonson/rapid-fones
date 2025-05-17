@@ -98,7 +98,7 @@ const SearchResult = ({ searchTerm, products, resetSearch }) => {
     resetSearch("");
   };
   return (
-    <div className="flex border border-slate-600 rounded-md bg-blue-950 opacity-100 items-center justify-center text-white absolute top-[100%] mt-[2.7rem] z-30 left-0 w-[100%] md:w-[70%]">
+    <div className="flex border h-[300px] overflow-y-auto border-slate-600 rounded-md bg-blue-950 opacity-100 items-center justify-center text-white absolute top-[100%] mt-[2.7rem] z-30 left-0 w-[100%] md:w-[70%]">
       <div className="flex flex-col p-1 w-full">
         {filteredProducts.map((product) => (
           <Link

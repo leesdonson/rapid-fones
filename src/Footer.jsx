@@ -1,33 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { RiTwitterXFill } from "react-icons/ri";
+import { socialLinks } from "./lib/footer-links";
+import { RiExternalLinkFill } from "react-icons/ri";
 
-const socialLinks = [
-  {
-    id: 1,
-    url: "/",
-    icon: <FaFacebook size={22} color="white" />,
-  },
-  {
-    id: 2,
-    url: "/",
-    icon: <FaTiktok size={22} color="white" />,
-  },
-  {
-    id: 3,
-    url: "/",
-    icon: <FaInstagram size={22} color="white" />,
-  },
-  {
-    id: 1,
-    url: "/",
-    icon: <RiTwitterXFill size={22} color="white" />,
-  },
-];
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-blue-950 flex flex-col justify-center items-center p-4">
+    <footer className="bg-gradient-to-r from-blue-800 to-orange-500 flex flex-col justify-center items-center p-4">
       <p className="text-center text-slate-300 font-thin text-sm">
         All rights reserved &copy; {year} | RapidFones PNG
       </p>
@@ -43,9 +21,16 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <small className="mt-3 text-slate-300 font-thin">
+      <small className="mt-3 text-slate-50 flex items-center gap-2 font-thin">
         Design and Developed by:{" "}
-        <span className="font-semibold">Krintifa Lab</span>
+        <Link
+          className="flex items-center gap-1 text-blue-200"
+          to="https://www.krintifa.com"
+          target="_blank"
+        >
+          <span className="font-semibold">Krintifa Lab</span>
+          <RiExternalLinkFill size={18} />
+        </Link>
       </small>
     </footer>
   );
