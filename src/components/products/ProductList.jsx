@@ -44,9 +44,10 @@ const ProductList = () => {
   }, [selectedCategory, selectedBrand]);
 
   // filteredProducts = filterBrand;
-  const randomProducts = filteredProducts.sort(() => Math.random() - 0.5);
+  // const randomProducts = filteredProducts.sort(() => Math.random() - 0.5);
   //slice 1st 15 for pagination
-  const slicedProducts = randomProducts.slice(skip, skip + limit);
+  // const slicedProducts = randomProducts.slice(skip, skip + limit);
+  const slicedProducts = filteredProducts.slice(skip, skip + limit);
   // slicedProducts.sort(() => Math.random() - 0.5);
 
   if (!slicedProducts || slicedProducts.length === 0) {
