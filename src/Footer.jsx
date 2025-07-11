@@ -5,8 +5,8 @@ import { RiExternalLinkFill } from "react-icons/ri";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-gradient-to-r from-blue-800 to-orange-500 flex flex-col justify-center items-center p-4">
-      <p className="text-center text-slate-300 font-thin text-sm">
+    <footer className="flex flex-col justify-center items-center p-4">
+      <p className="text-center font-thin text-sm">
         All rights reserved &copy; {year} | RapidFones PNG
       </p>
 
@@ -17,15 +17,15 @@ const Footer = () => {
             to={s.url}
             key={s.id}
           >
-            {s.icon}
+            {<s.icon size={22} color="black" />}
           </Link>
         ))}
       </div>
-      <small className="mt-3 text-slate-50 flex items-center gap-2 font-thin">
+      <small className="mt-3 flex items-center gap-2 font-thin">
         Design and Developed by:{" "}
         <Link
-          className="flex items-center gap-1 text-blue-200"
-          to="https://www.krintifa.com"
+          className="flex items-center gap-1 text-blue-600"
+          to="https://www.krintifalab.com"
           target="_blank"
         >
           <span className="font-semibold">Krintifa Lab</span>

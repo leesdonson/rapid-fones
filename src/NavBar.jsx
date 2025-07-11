@@ -11,7 +11,7 @@ const NavBar = () => {
   const toggleMenu = () => setOpen(!open);
 
   return (
-    <header className="backdrop-blur-2xl bg-slate-900/30 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
+    <header className="backdrop-blur-2xl bg-black/90 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
       <div className="logo flex items-center justify-center w-[160px] md:w-[200px] h-[40px]">
         <Link className="logo " to="/">
           <img
@@ -25,7 +25,7 @@ const NavBar = () => {
       <nav
         className={
           open
-            ? "mobile active flex flex-col bg-orange-800 w-full justify-center items-center"
+            ? "mobile active flex flex-col bg-neutral-900 w-full justify-center items-center"
             : "mobile flex flex-col md:flex-row items-center justify-center gap-3"
         }
       >
