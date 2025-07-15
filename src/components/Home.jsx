@@ -19,7 +19,7 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-            className="w-full sm:w-[50%] bg-gradient-to-r from-black/50 to-neutral-500/50 rounded-md p-3 flex flex-col items-center shadow-custom"
+            className="w-full sm:w-[70%] bg-gradient-to-r from-black/50 to-neutral-500/50 rounded-md p-3 flex flex-col items-center shadow-custom mb-8"
           >
             <h1 className="font-bold text-[5rem] leading-tight stroke text-transparent bg-clip-text bg-gradient-to-r -tracking-tighter from-blue-800 to-orange-600">
               MLINK
@@ -29,7 +29,14 @@ const Home = () => {
               Feed your imagination
             </p>
           </motion.div>
-          <div className="mt-10 flex items-center justify-center gap-5 w-full md:w-[50%]">
+          <div className="w-full md:w-[50%] text-center  text-slate-200 bg-black/40  rounded-md p-2">
+            <p className="text-sm">
+              For all your mobile phone needs, look no further than our website.
+              We offer a wide range of high-quality products at competitive
+              prices.
+            </p>
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-5 w-full md:w-[50%]">
             <motion.button
               initial={{ opacity: 0, y: -200 }}
               animate={{
@@ -39,7 +46,7 @@ const Home = () => {
                   ease: "easeIn",
                 },
               }}
-              className="w-full bg-gradient-to-r from-slate-100 to-neutral-600 outline-none bg-transparent text-slate-900 shadow-md shadow-slate-50 font-md py-2 px-4 rounded-full hover:scale-105 transition-all duration-300 ease-in-out"
+              className="w-full sm:w-[30%] md:w-[50%] bg-gradient-to-r from-slate-100 to-neutral-600 outline-none bg-transparent text-slate-900 shadow-md shadow-slate-50 font-md py-2 px-4 rounded-full hover:scale-105 transition-all duration-300 ease-in-out"
               type="button"
               onClick={() => navigate("/products")}
             >
@@ -53,7 +60,7 @@ const Home = () => {
                 y: 0,
                 transition: { delay: 0.2, ease: "easeIn" },
               }}
-              className="w-full to-neutral-400 bg-gradient-to-r from-neutral-900 outline-none bg-transparent shadow-md shadow-slate-50  text-slate-200 font-md py-2 px-4 rounded-full hover:scale-105 transition-all duration-300 ease-in-out"
+              className="w-full sm:w-[30%] md:w-[50%] to-neutral-400 bg-gradient-to-r from-neutral-900 outline-none bg-transparent shadow-md shadow-slate-50  text-slate-200 font-md py-2 px-4 rounded-full hover:scale-105 transition-all duration-300 ease-in-out"
               type="button"
               onClick={() => navigate("/contact")}
             >

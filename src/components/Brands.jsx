@@ -21,7 +21,7 @@ const Brands = () => {
         </span>{" "}
         Brands.
       </motion.h1>
-      <div className="w-full max-w-2xl  mx-auto h-full flex flex-wrap gap-5">
+      <div className="w-full max-w-2xl mx-auto h-full p-3 flex items-center flex-wrap gap-5 md:gap-10">
         {brandImages.map((image) => (
           <motion.div
             viewport={{ once: true }}

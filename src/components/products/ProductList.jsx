@@ -13,6 +13,7 @@ const ProductList = () => {
     selectedCategory,
     setSelectedCategory,
     selectedBrand,
+    searchTerm,
     setSelectedBrand,
   } = useContext(FilterContext);
 
@@ -39,12 +40,18 @@ const ProductList = () => {
     return product.brand.toLowerCase() === selectedBrand.toLowerCase();
   });
 
+  // filter by search term
+  const filterSearch = filterBrand.filter((product) => {
+    if (!searchTerm) return true;
+    return product.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
   useEffect(() => {
     setFilteredProducts(filterBrand);
   }, [selectedCategory, selectedBrand]);
 
   // get random products
-  const randomProducts = filteredProducts.sort(() => Math.random() - 0.5);
+  const randomProducts = filterSearch.sort(() => Math.random() - 0.5);
 
   //slice 1st 15 for pagination
   const slicedProducts = randomProducts.slice(skip, skip + limit);

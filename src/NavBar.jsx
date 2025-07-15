@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <header className="backdrop-blur-2xl bg-black/90 fixed top-0 left-0 right-0 z-50 p-3 flex justify-between items-center md:px-10">
-      <div className="logo flex items-center justify-center w-[160px] md:w-[200px] h-[40px]">
+      <div className="logo flex items-center justify-center sm:h-[20px] sm:w-[120px] w-[115px] md:w-[150px] h-[15px]">
         <Link className="logo " to="/">
           <img
             className="w-[100%] object-contain"

@@ -24,7 +24,7 @@ const ProductNavbar = () => {
   const reset = () => setSearchTerm("");
 
   return (
-    <div className="bg-slate-800/80 fixed top-0 backdrop-blur-xl z-30 left-0 right-0 mt-[4rem] md:mt-[1.9rem] flex flex-col">
+    <div className="bg-slate-800/80 fixed top-0 backdrop-blur-xl z-30 left-0 right-0 mt-[3rem] md:mt-[1.9rem] flex flex-col">
       <div className="relative">
         <div
           className="flex md:hidden items-center gap-3 text-slate-100 p-1"
@@ -127,14 +127,14 @@ const SearchResult = ({ searchTerm, products, resetSearch }) => {
     resetSearch("");
   };
   return (
-    <div className="flex border h-[300px] overflow-y-auto border-slate-600 bg-black opacity-100 items-center flex-col text-white absolute p-2 top-[100%] mt-[2.7rem] z-30 left-0 w-[100%] md:w-[70%]">
+    <div className="flex border h-[300px] overflow-y-auto border-slate-600 bg-black opacity-100 items-center flex-col text-white absolute p-2 top-[100%] mt-[2.7rem] z-30 left-0 w-full rounded-md">
       <p>Search Result</p>
       <div className="flex flex-col p-1 w-full">
         {filteredProducts.map((product) => (
           <Link
             onClick={clearSearch}
             to={`/products/details/${product.slug}`}
-            key={product.id}
+            key={product.slug}
             className="flex items-center justify-between border border-slate-600 rounded w-full p-1 my-1"
           >
             <img
