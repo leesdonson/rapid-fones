@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { products } from "../../lib/products";
 import { FaArrowCircleLeft } from "react-icons/fa";
+import { clsx } from "clsx";
 
 const ProductDetails = () => {
   const { slug } = useParams();
@@ -66,6 +67,7 @@ const ProductDetails = () => {
               prop2={productDetails.internalMemory}
             />
             <Details
+              className="flex-col items-start"
               title1="Display"
               prop1={productDetails.display}
               title2="Display Type"
@@ -85,10 +87,18 @@ const ProductDetails = () => {
   );
 };
 
-const Details = ({ title1, prop1, title2 = null, prop2 = null }) => {
+const Details = ({
+  title1,
+  prop1,
+  title2 = null,
+  prop2 = null,
+  className = "",
+}) => {
   return (
-    <div className="border flex items-center justify-between rounded  hover:scale-105 mb-1 border-slate-200 p-2">
-      <div className="text-sm">
+    <div
+      className={`${className} border flex  justify-between rounded  hover:scale-105 mb-1 border-slate-200 p-2`}
+    >
+      <div className="text-sm mb-1">
         <p className="font-bold mb-1">{title1}: </p>
         <span className="font-light ">{prop1}</span>
       </div>
